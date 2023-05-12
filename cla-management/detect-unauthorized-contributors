@@ -6,10 +6,7 @@ import sys
 
 
 def get_usernames(contributors):
-    usernames = set()
-    for contributor in contributors:
-        usernames.add(contributor['login'])
-    return usernames
+    return {contributor['login'] for contributor in contributors}
 
 
 def get_next_url(link_header):
@@ -22,7 +19,6 @@ def get_next_url(link_header):
         (url, rel) = link.strip().split(';')
         if rel.strip()[5:-1] == 'next':
             return url.strip()[1:-1]
-    pass
 
 
 def get_contributors(auth):
@@ -72,4 +68,6 @@ contributors = get_contributors(auth)
 whitelisted_users = get_whitelisted_users(args.whitelist)
 
 if not contributors.issubset(whitelisted_users):
-    exit("Users [%s] were not in the whitelist." % ", ".join(contributors.difference(whitelisted_users)))
+    exit(
+        f'Users [{", ".join(contributors.difference(whitelisted_users))}] were not in the whitelist.'
+    )

@@ -40,13 +40,12 @@ def skippedTests(basedir, expirationAge):
                 if skipped is None: continue
                 message = skipped.get("message","NO MESSAGE!")
                 if message.lower().startswith("not a test"): continue
-                match = DATE.search(message)
-                if match:
+                if match := DATE.search(message):
                     y,m,d = match.group('y'),match.group('m'),match.group('d')
                     date = datetime.date(int(y),int(m),int(d))
                     delta = datetime.date.today() - date
                     if delta < expirationAge: continue
-                    message = "Expired %s days ago! %s"%(delta.days,message)
+                    message = f"Expired {delta.days} days ago! {message}"
                 classname = testcase.get("classname","")
                 testname = testcase.get("name","")
                 yield {'class':classname,'test':testname,'message':message}
