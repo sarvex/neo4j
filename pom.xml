@@ -31,7 +31,7 @@
     <slf4j-api.version>1.7.7</slf4j-api.version>
     <logback-classic.version>1.3.12</logback-classic.version>
     <generate-config-docs-phase>prepare-package</generate-config-docs-phase>
-    <hsqldb.version>2.3.2</hsqldb.version>
+    <hsqldb.version>2.7.1</hsqldb.version>
   </properties>
 
   <modules>
