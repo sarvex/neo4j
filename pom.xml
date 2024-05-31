@@ -613,7 +613,7 @@ public class ComponentVersion extends Version
       <dependency>
         <groupId>com.googlecode.concurrentlinkedhashmap</groupId>
         <artifactId>concurrentlinkedhashmap-lru</artifactId>
-        <version>1.4</version>
+        <version>1.4.2</version>
       </dependency>
       <dependency>
         <groupId>net.sf.opencsv</groupId>
