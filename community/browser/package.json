@@ -33,7 +33,7 @@
     "karma-junit-reporter": "~0.1",
     "karma-sauce-launcher": "~0.1",
     "grunt-connect-proxy": "~0.1.5",
-    "shelljs": "~0.2.3",
+    "shelljs": "~0.8.0",
     "semver": "~2.1.0"
   },
   "engines": {
