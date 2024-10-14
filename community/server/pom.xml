@@ -72,7 +72,7 @@
     <!-- Don't write new code using this, use neo-server.external instead -->
     <webdriver.override.neo-server.baseuri/>
 
-    <jetty.version>10.0.14</jetty.version>
+    <jetty.version>10.0.24</jetty.version>
   </properties>
 
   <scm>
