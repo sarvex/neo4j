@@ -10,7 +10,7 @@
 
   <groupId>org.neo4j</groupId>
   <artifactId>neo4j-community</artifactId>
-  <version>2.3-SNAPSHOT</version>
+  <version>5.26.21</version>
 
   <name>Neo4j - Community</name>
   <packaging>pom</packaging>
